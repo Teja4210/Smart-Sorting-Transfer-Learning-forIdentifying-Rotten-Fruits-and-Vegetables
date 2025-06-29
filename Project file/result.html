@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/style.css') }}">
+    <style>
+        .container {
+    transform: translateY(-90px); 
+}
+
+    </style>
+</head>
+<body>
+
+<!-- ======= Navbar ======= -->
+<header>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="/">Home</a> |
+            <a href="/about">About</a> |
+            <a href="/predict">Predict</a> |
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<!-- ======= Centered Content ======= -->
+<div class="container">
+    <h1>FreshEye Detection</h1>
+    <h3>Result of Fruits and Vegetables</h3>
+    <p><strong>Prediction:</strong> {{ prediction }}</p>
+
+    <img src="{{ image_path }}" alt="Uploaded Image" width="200px" style="border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5); margin-top: 20px;">
+
+    <br><br>
+    <a href="/predict">
+        <button>Test Another Image</button>
+    </a>
+</div>
+
+</body>
+</html>
